@@ -6,7 +6,7 @@ Laboratorio 12 de Desarrollo de Aplicaciones Web Avanzado. Aplicación de autore
 
 Node.js 22.12 o superior. Ejecutar `npm ci`, copiar `.env.example` a `.env` y configurar las URL de PostgreSQL con la contraseña de la base de datos codificada para URL. No incluir `.env` en Git. La CA pública de Supabase se encuentra en `certs/supabase-ca.crt` para verificar el certificado.
 
-Ejecutar `npm run db:push` y después `npm run dev`; abrir http://localhost:3000. `DATABASE_URL` se usa en tiempo de ejecución y `DIRECT_URL` por la CLI de Prisma. No es necesario instalar PostgreSQL localmente.
+Ejecutar `npm run db:push` y después `npm run dev`; abrir http://localhost:3000. `DATABASE_URL` usa el pooler de transacciones de Supabase (puerto 6543) en tiempo de ejecución y `DIRECT_URL` usa el pooler de sesión (5432) para la CLI de Prisma. No es necesario instalar PostgreSQL localmente.
 
 ## Funciones
 

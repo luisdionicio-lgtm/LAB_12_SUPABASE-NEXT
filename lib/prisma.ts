@@ -18,7 +18,7 @@ export function getPrisma() {
     url.searchParams.delete("sslmode");
     url.searchParams.delete("sslrootcert");
     const adapter = new PrismaPg({ connectionString: url.toString(), ssl,
-      max: 5, connectionTimeoutMillis: 10000, idleTimeoutMillis: 20000 });
+      max: 1, connectionTimeoutMillis: 10000, idleTimeoutMillis: 20000 });
     globalDb.prisma = new PrismaClient({ adapter });
   }
   return globalDb.prisma;
