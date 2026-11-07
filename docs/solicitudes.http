@@ -1,0 +1,74 @@
+@baseUrl = http://localhost:3000
+@authorId = REEMPLAZAR_CON_ID_AUTOR
+@bookId = REEMPLAZAR_CON_ID_LIBRO
+
+### 01 Listar autores
+GET {{baseUrl}}/api/authors
+
+### 02 Crear autor
+POST {{baseUrl}}/api/authors
+Content-Type: application/json
+
+{
+  "name": "Gabriel García Márquez",
+  "email": "gabo@example.com",
+  "nationality": "Colombia",
+  "birthYear": 1927,
+  "bio": "Premio Nobel de Literatura 1982"
+}
+
+### 03 Autor por ID
+GET {{baseUrl}}/api/authors/{{authorId}}
+
+### 04 Actualizar autor
+PUT {{baseUrl}}/api/authors/{{authorId}}
+Content-Type: application/json
+
+{
+  "name": "Gabriel García Márquez",
+  "bio": "Autor de Cien años de soledad"
+}
+
+### 05 Listar libros
+GET {{baseUrl}}/api/books
+
+### 06 Crear libro
+POST {{baseUrl}}/api/books
+Content-Type: application/json
+
+{
+  "title": "Cien años de soledad",
+  "description": "Obra maestra del realismo mágico",
+  "isbn": "978-0307474728",
+  "publishedYear": 1967,
+  "genre": "Novela",
+  "pages": 417,
+  "authorId": "{{authorId}}"
+}
+
+### 07 Libros de un autor
+GET {{baseUrl}}/api/authors/{{authorId}}/books
+
+### 08 Filtrar libros por género
+GET {{baseUrl}}/api/books?genre=Novela
+
+### 09 Libro por ID
+GET {{baseUrl}}/api/books/{{bookId}}
+
+### 10 Actualizar libro
+PUT {{baseUrl}}/api/books/{{bookId}}
+Content-Type: application/json
+
+{
+  "description": "Novela de realismo mágico publicada en 1967",
+  "pages": 417
+}
+
+### 11 Eliminar libro
+DELETE {{baseUrl}}/api/books/{{bookId}}
+
+### 12 Eliminar autor
+DELETE {{baseUrl}}/api/authors/{{authorId}}
+
+### 13 Verificar conexión
+GET {{baseUrl}}/api/health

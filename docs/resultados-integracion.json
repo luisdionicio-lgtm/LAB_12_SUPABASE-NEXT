@@ -1,0 +1,137 @@
+{
+  "date": "2026-11-07T16:23:28.775Z",
+  "base": "http://localhost:3000",
+  "total": 26,
+  "results": [
+    {
+      "test": "Conexión PostgreSQL",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "test": "JSON inválido",
+      "status": 400,
+      "passed": true
+    },
+    {
+      "test": "Validación de autor",
+      "status": 400,
+      "passed": true
+    },
+    {
+      "test": "Crear autor",
+      "status": 201,
+      "passed": true
+    },
+    {
+      "test": "Correo duplicado",
+      "status": 409,
+      "passed": true
+    },
+    {
+      "test": "Listar autores",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "test": "Autor por ID",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "test": "Autor sin libros",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "test": "Actualizar autor parcialmente",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "test": "Actualización vacía",
+      "status": 400,
+      "passed": true
+    },
+    {
+      "test": "Autor inexistente",
+      "status": 404,
+      "passed": true
+    },
+    {
+      "test": "Libros de autor inexistente",
+      "status": 404,
+      "passed": true
+    },
+    {
+      "test": "Libro sin autor válido",
+      "status": 404,
+      "passed": true
+    },
+    {
+      "test": "Páginas inválidas",
+      "status": 400,
+      "passed": true
+    },
+    {
+      "test": "Crear libro",
+      "status": 201,
+      "passed": true
+    },
+    {
+      "test": "ISBN duplicado",
+      "status": 409,
+      "passed": true
+    },
+    {
+      "test": "Listar libros",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "test": "Filtrar género exacto",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "test": "Libro por ID",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "test": "Libros por autor",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "test": "Actualizar libro",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "test": "Proteger autor con libros",
+      "status": 409,
+      "passed": true
+    },
+    {
+      "test": "Eliminar libro",
+      "status": 204,
+      "passed": true
+    },
+    {
+      "test": "Libro inexistente",
+      "status": 404,
+      "passed": true
+    },
+    {
+      "test": "Eliminar autor",
+      "status": 204,
+      "passed": true
+    },
+    {
+      "test": "Autor eliminado",
+      "status": 404,
+      "passed": true
+    }
+  ]
+}

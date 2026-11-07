@@ -1,0 +1,209 @@
+{
+  "info": {
+    "name": "Laboratorio 12 — Biblioteca básica",
+    "description": "Importable en Thunder Client. No incluye TAREA. Configura baseUrl, authorId y bookId.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000"
+    },
+    {
+      "key": "authorId",
+      "value": "REEMPLAZAR_CON_ID_AUTOR"
+    },
+    {
+      "key": "bookId",
+      "value": "REEMPLAZAR_CON_ID_LIBRO"
+    }
+  ],
+  "item": [
+    {
+      "name": "01 Listar autores",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/api/authors",
+        "description": "Procedimiento básico del laboratorio 12. Sustituir los IDs con los obtenidos en las creaciones. Ejecutar las eliminaciones al final."
+      },
+      "response": []
+    },
+    {
+      "name": "02 Crear autor",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/authors",
+        "description": "Procedimiento básico del laboratorio 12. Sustituir los IDs con los obtenidos en las creaciones. Ejecutar las eliminaciones al final.",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Gabriel García Márquez\",\n  \"email\": \"gabo@example.com\",\n  \"nationality\": \"Colombia\",\n  \"birthYear\": 1927,\n  \"bio\": \"Premio Nobel de Literatura 1982\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "03 Autor por ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/api/authors/{{authorId}}",
+        "description": "Procedimiento básico del laboratorio 12. Sustituir los IDs con los obtenidos en las creaciones. Ejecutar las eliminaciones al final."
+      },
+      "response": []
+    },
+    {
+      "name": "04 Actualizar autor",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/authors/{{authorId}}",
+        "description": "Procedimiento básico del laboratorio 12. Sustituir los IDs con los obtenidos en las creaciones. Ejecutar las eliminaciones al final.",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Gabriel García Márquez\",\n  \"bio\": \"Autor de Cien años de soledad\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "05 Listar libros",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/api/books",
+        "description": "Procedimiento básico del laboratorio 12. Sustituir los IDs con los obtenidos en las creaciones. Ejecutar las eliminaciones al final."
+      },
+      "response": []
+    },
+    {
+      "name": "06 Crear libro",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/books",
+        "description": "Procedimiento básico del laboratorio 12. Sustituir los IDs con los obtenidos en las creaciones. Ejecutar las eliminaciones al final.",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Cien años de soledad\",\n  \"description\": \"Obra maestra del realismo mágico\",\n  \"isbn\": \"978-0307474728\",\n  \"publishedYear\": 1967,\n  \"genre\": \"Novela\",\n  \"pages\": 417,\n  \"authorId\": \"{{authorId}}\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "07 Libros de un autor",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/api/authors/{{authorId}}/books",
+        "description": "Procedimiento básico del laboratorio 12. Sustituir los IDs con los obtenidos en las creaciones. Ejecutar las eliminaciones al final."
+      },
+      "response": []
+    },
+    {
+      "name": "08 Filtrar libros por género",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/api/books?genre=Novela",
+        "description": "Procedimiento básico del laboratorio 12. Sustituir los IDs con los obtenidos en las creaciones. Ejecutar las eliminaciones al final."
+      },
+      "response": []
+    },
+    {
+      "name": "09 Libro por ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/api/books/{{bookId}}",
+        "description": "Procedimiento básico del laboratorio 12. Sustituir los IDs con los obtenidos en las creaciones. Ejecutar las eliminaciones al final."
+      },
+      "response": []
+    },
+    {
+      "name": "10 Actualizar libro",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{baseUrl}}/api/books/{{bookId}}",
+        "description": "Procedimiento básico del laboratorio 12. Sustituir los IDs con los obtenidos en las creaciones. Ejecutar las eliminaciones al final.",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"description\": \"Novela de realismo mágico publicada en 1967\",\n  \"pages\": 417\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "11 Eliminar libro",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": "{{baseUrl}}/api/books/{{bookId}}",
+        "description": "Procedimiento básico del laboratorio 12. Sustituir los IDs con los obtenidos en las creaciones. Ejecutar las eliminaciones al final."
+      },
+      "response": []
+    },
+    {
+      "name": "12 Eliminar autor",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": "{{baseUrl}}/api/authors/{{authorId}}",
+        "description": "Procedimiento básico del laboratorio 12. Sustituir los IDs con los obtenidos en las creaciones. Ejecutar las eliminaciones al final."
+      },
+      "response": []
+    },
+    {
+      "name": "13 Verificar conexión",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/api/health",
+        "description": "Procedimiento básico del laboratorio 12. Sustituir los IDs con los obtenidos en las creaciones. Ejecutar las eliminaciones al final."
+      },
+      "response": []
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Author {
+  id          String   @id @default(cuid())
+  name        String
+  email       String   @unique
+  nationality String
+  birthYear   Int?
+  bio         String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  books       Book[]
+
+  @@index([name])
+}
+
+model Book {
+  id            String   @id @default(cuid())
+  title         String
+  description   String?
+  isbn          String   @unique
+  publishedYear Int
+  genre         String
+  pages         Int
+  authorId      String
+  author        Author   @relation(fields: [authorId], references: [id], onDelete: Restrict)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@index([authorId])
+  @@index([genre])
+  @@index([createdAt, id])
+}
