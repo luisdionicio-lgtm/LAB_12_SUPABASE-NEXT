@@ -1,0 +1,20 @@
+{
+  "base": "https://lab-12-supabase-next.vercel.app",
+  "results": [
+    {
+      "path": "/api/health",
+      "status": 200,
+      "expected": 200
+    },
+    {
+      "path": "/api/authors/cmw6nnwrm000008kuqj0g8u2m",
+      "status": 404,
+      "expected": 404
+    },
+    {
+      "path": "/api/books/cmw6np0is000108kuwe9s1h3q",
+      "status": 404,
+      "expected": 404
+    }
+  ]
+}
