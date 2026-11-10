@@ -1,0 +1,184 @@
+{
+  "checkedAt": "2026-11-10T21:31:39.156Z",
+  "tables": [
+    {
+      "table_name": "Author",
+      "rls_enabled": true
+    },
+    {
+      "table_name": "Book",
+      "rls_enabled": true
+    }
+  ],
+  "directClientPrivileges": [
+    {
+      "role": "anon",
+      "table_name": "Author",
+      "privilege": "SELECT",
+      "allowed": false
+    },
+    {
+      "role": "anon",
+      "table_name": "Book",
+      "privilege": "SELECT",
+      "allowed": false
+    },
+    {
+      "role": "authenticated",
+      "table_name": "Author",
+      "privilege": "SELECT",
+      "allowed": false
+    },
+    {
+      "role": "authenticated",
+      "table_name": "Book",
+      "privilege": "SELECT",
+      "allowed": false
+    },
+    {
+      "role": "anon",
+      "table_name": "Author",
+      "privilege": "INSERT",
+      "allowed": false
+    },
+    {
+      "role": "anon",
+      "table_name": "Book",
+      "privilege": "INSERT",
+      "allowed": false
+    },
+    {
+      "role": "authenticated",
+      "table_name": "Author",
+      "privilege": "INSERT",
+      "allowed": false
+    },
+    {
+      "role": "authenticated",
+      "table_name": "Book",
+      "privilege": "INSERT",
+      "allowed": false
+    },
+    {
+      "role": "anon",
+      "table_name": "Author",
+      "privilege": "UPDATE",
+      "allowed": false
+    },
+    {
+      "role": "anon",
+      "table_name": "Book",
+      "privilege": "UPDATE",
+      "allowed": false
+    },
+    {
+      "role": "authenticated",
+      "table_name": "Author",
+      "privilege": "UPDATE",
+      "allowed": false
+    },
+    {
+      "role": "authenticated",
+      "table_name": "Book",
+      "privilege": "UPDATE",
+      "allowed": false
+    },
+    {
+      "role": "anon",
+      "table_name": "Author",
+      "privilege": "DELETE",
+      "allowed": false
+    },
+    {
+      "role": "anon",
+      "table_name": "Book",
+      "privilege": "DELETE",
+      "allowed": false
+    },
+    {
+      "role": "authenticated",
+      "table_name": "Author",
+      "privilege": "DELETE",
+      "allowed": false
+    },
+    {
+      "role": "authenticated",
+      "table_name": "Book",
+      "privilege": "DELETE",
+      "allowed": false
+    },
+    {
+      "role": "anon",
+      "table_name": "Author",
+      "privilege": "TRUNCATE",
+      "allowed": false
+    },
+    {
+      "role": "anon",
+      "table_name": "Book",
+      "privilege": "TRUNCATE",
+      "allowed": false
+    },
+    {
+      "role": "authenticated",
+      "table_name": "Author",
+      "privilege": "TRUNCATE",
+      "allowed": false
+    },
+    {
+      "role": "authenticated",
+      "table_name": "Book",
+      "privilege": "TRUNCATE",
+      "allowed": false
+    },
+    {
+      "role": "anon",
+      "table_name": "Author",
+      "privilege": "REFERENCES",
+      "allowed": false
+    },
+    {
+      "role": "anon",
+      "table_name": "Book",
+      "privilege": "REFERENCES",
+      "allowed": false
+    },
+    {
+      "role": "authenticated",
+      "table_name": "Author",
+      "privilege": "REFERENCES",
+      "allowed": false
+    },
+    {
+      "role": "authenticated",
+      "table_name": "Book",
+      "privilege": "REFERENCES",
+      "allowed": false
+    },
+    {
+      "role": "anon",
+      "table_name": "Author",
+      "privilege": "TRIGGER",
+      "allowed": false
+    },
+    {
+      "role": "anon",
+      "table_name": "Book",
+      "privilege": "TRIGGER",
+      "allowed": false
+    },
+    {
+      "role": "authenticated",
+      "table_name": "Author",
+      "privilege": "TRIGGER",
+      "allowed": false
+    },
+    {
+      "role": "authenticated",
+      "table_name": "Book",
+      "privilege": "TRIGGER",
+      "allowed": false
+    }
+  ],
+  "policies": []
+}
